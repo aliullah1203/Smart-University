@@ -1,0 +1,23 @@
+.page-container {
+  margin-top: 24px;
+}
+
+.dashboard-table-wrapper {
+  background: #e9e4e4;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+  overflow-x: auto; /* adds horizontal scroll if needed */
+}
+
+.dashboard-quick-actions {
+  background: #c9c0c0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(144, 172, 240, 0.04);
+}
+
+.dashboard-quick-actions p {
+  margin: 0;
+  line-height: 1.6;
+}

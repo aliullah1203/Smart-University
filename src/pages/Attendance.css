@@ -1,0 +1,46 @@
+.page-container {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.page-container h4 {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.MuiPaper-root {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+  overflow-x: auto;
+}
+
+.MuiTable-root {
+  min-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.MuiTableHead-root {
+  background-color: #f6f8fb;
+}
+
+.MuiTableCell-root {
+  padding: 12px 16px;
+  border-bottom: none;
+}
+
+.MuiTableRow-root {
+  background: #fff;
+  border-radius: 8px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.MuiTableRow-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.MuiCircularProgress-root {
+  color: #0a75dfff;
+}

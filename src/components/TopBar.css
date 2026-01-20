@@ -1,0 +1,39 @@
+.topbar-container {
+  margin-bottom: 16px;
+}
+
+.topbar-appbar {
+  background-color: #fff;
+  color: #0f172a;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.1);
+}
+
+.topbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-logo {
+  height: 35px;
+  width: 25px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.topbar-title {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.topbar-buttons button {
+  margin-left: 12px;
+  text-transform: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.topbar-buttons button:hover {
+  background: rgba(5, 185, 209, 0.1);
+  border-radius: 6px;
+}

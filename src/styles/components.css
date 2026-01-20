@@ -1,0 +1,92 @@
+/* Basic component styles for the React app - small, unobtrusive rules */
+:root{
+  --primary: #1976d2;
+  --bg: #f5f5f5;
+  --card-bg: #ffffff;
+}
+
+.app-container{
+  min-height:100vh;
+  background-color: var(--bg);
+}
+
+.topbar-title{
+  font-weight:600;
+}
+
+.container-card{
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.form-card{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+pre.api-debug{
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Auth page specific */
+.auth-hero{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding:24px;
+}
+.auth-logo{
+  width:120px;
+  height:auto;
+  border-radius:6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.auth-card{
+  padding: 28px;
+  border-radius: 12px;
+}
+
+/* Dashboard */
+.dashboard-grid .card {
+  padding:20px;
+  border-radius:10px;
+  background:var(--card-bg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+@media (max-width:600px){
+  .auth-hero{flex-direction:column; text-align:center}
+}
+
+/* Page layout helpers */
+.page-container{
+  padding: 24px 12px;
+}
+.page-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+.table-responsive{
+  overflow:auto;
+}
+
+/* Footer styling used by the global Footer component */
+.app-footer{
+  padding:16px 12px;
+  text-align:center;
+  color:var(--footer-color);
+  border-top:1px solid var(--footer-border);
+  margin-top:28px;
+  background: var(--footer-bg);
+  font-size:0.9rem;
+}
+
+.app-footer a{ color: var(--footer-link); text-decoration: none }
+.app-footer{ background: var(--footer-bg); }
+

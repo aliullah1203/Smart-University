@@ -1,0 +1,42 @@
+/* Full-screen container */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #244d8a 0%, #e3f2fd 100%);
+}
+
+/* Centered hero */
+.register-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.register-logo {
+  width: 120px;
+  margin-bottom: 32px;
+}
+
+/* Card */
+.register-card {
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+/* Input fields */
+.MuiTextField-root {
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+/* Button hover effect */
+.MuiButton-containedPrimary:hover {
+  background-color: #0b3d91;
+}

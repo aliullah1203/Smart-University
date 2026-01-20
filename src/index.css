@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --accent: #00acc1;
+  --primary: #0b3d91;
+}
+
+/* Footer variables - default to a branded, high-contrast footer */
+:root{
+  --footer-bg: var(--primary); /* deep navy by default */
+  --footer-color: #ffffff; /* white text on the footer */
+  --footer-border: rgba(255,255,255,0.06);
+  --footer-link: rgba(255,255,255,0.95);
+}
+
+*{box-sizing: border-box}
+body { 
+    margin: 0; 
+    font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial; 
+    background: var(--bg);
+    color: #0f172a;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+#root { 
+    min-height: 100vh; 
+}
+
+a{ color: var(--primary); }
+

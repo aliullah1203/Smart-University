@@ -1,0 +1,12 @@
+.dashboard-hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.dashboard-grid{
+  margin-top:12px;
+}
+.dashboard-card-cta{
+  margin-top:12px;
+}
