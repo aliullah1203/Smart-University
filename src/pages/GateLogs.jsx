@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import api from '../services/api';
 import { Container, Typography, Paper, Table, TableHead, TableRow, TableCell, TableBody, CircularProgress } from '@mui/material';
+import wsClient from '../services/ws';
 
 export default function GateLogs(){
   const [logs, setLogs] = useState(null);
@@ -9,6 +10,13 @@ export default function GateLogs(){
     api.get('/api/v1/gate/log')
       .then(r=> setLogs(r.data || []))
       .catch(()=> setLogs([]))
+  
+    const unsub = wsClient.subscribe((payload) => {
+      if(payload?.type === 'gate_log' && payload.data){
+        setLogs((prev)=> [payload.data, ...prev].slice(0,200));
+      }
+    });
+    return () => unsub();
   },[])
 
   return (

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import api from '../services/api';
 import { Container, Typography, Paper, Table, TableHead, TableRow, TableCell, TableBody, CircularProgress } from '@mui/material';
+import wsClient from '../services/ws';
 
 export default function FireMonitor(){
   const [alerts, setAlerts] = useState(null);
@@ -9,6 +10,13 @@ export default function FireMonitor(){
     api.get('/api/v1/alerts/fire')
       .then(r=> setAlerts(r.data || []))
       .catch(()=> setAlerts([]))
+  
+    const unsub = wsClient.subscribe((payload) => {
+      if(payload?.type === 'alert' && payload.data){
+        setAlerts((prev)=> [payload.data, ...prev].slice(0,200));
+      }
+    });
+    return () => unsub();
   },[])
 
   return (

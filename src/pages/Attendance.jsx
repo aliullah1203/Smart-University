@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import api from '../services/api';
 import { Container, Typography, Paper, Table, TableBody, TableCell, TableHead, TableRow, CircularProgress } from '@mui/material';
+import wsClient from '../services/ws';
 
 export default function Attendance(){
   const [logs, setLogs] = useState(null);
@@ -9,6 +10,14 @@ export default function Attendance(){
     api.get('/api/v1/attendance')
       .then(r=> setLogs(r.data || []))
       .catch(()=> setLogs([]))
+  
+    // subscribe to realtime websocket messages
+    const unsub = wsClient.subscribe((payload) => {
+      if(payload?.type === 'attendance' && payload.data){
+        setLogs((prev)=> [payload.data, ...prev].slice(0,200));
+      }
+    });
+    return () => unsub();
   },[])
 
   return (
